@@ -1,0 +1,55 @@
+[project]
+name = "boneyard"
+version = "0.0.0"
+description = ""
+license = "MIT"
+readme = "README.md"
+authors = [
+    { name = "sgt0", email = "140186177+sgt0@users.noreply.github.com" }
+]
+classifiers = [
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Typing :: Typed",
+]
+requires-python = ">=3.13"
+dependencies = [
+    "ass~=1.0.3",
+    "jetpytools~=3.0.0",
+    "muxtools~=0.4.2",
+    "vapoursynth>=77",
+    "vapoursynth-scxvid~=3.0",
+    "vsjetpack~=2.0.0",
+
+    # Explicitly specify these so they're properly resolved through `uv --index`.
+    "vapoursynth-fmtconv>=31",
+]
+
+[dependency-groups]
+dev = [
+    "mypy==2.1.0",
+    "ruff==0.15.20",
+]
+
+[build-system]
+requires = ["uv_build==0.11.7"]
+build-backend = "uv_build"
+
+[tool.uv.sources]
+vapoursynth-fmtconv = { index = "vs-wheels" }
+
+[[tool.uv.index]]
+name = "vs-wheels"
+url = "https://jaded-encoding-thaumaturgy.github.io/vs-wheels/simple"
+explicit = true
+
+[tool.basedpyright]
+stubPath = "stubs"
+
+[tool.mypy]
+mypy_path = "$MYPY_CONFIG_FILE_DIR/stubs"
