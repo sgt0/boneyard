@@ -102,7 +102,7 @@ requires-dist = [
     { name = "vapoursynth", specifier = ">=77" },
     { name = "vapoursynth-fmtconv", specifier = ">=31.post1", index = "https://jaded-encoding-thaumaturgy.github.io/vs-wheels/simple" },
     { name = "vapoursynth-scxvid", specifier = "~=3.0" },
-    { name = "vsjetpack", specifier = "~=2.0.0" },
+    { name = "vsjetpack", specifier = "~=2.1.0" },
 ]
 
 [package.metadata.requires-dev]
@@ -876,7 +876,7 @@ wheels = [
 
 [[package]]
 name = "vsjetpack"
-version = "2.0.0"
+version = "2.1.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "jetpytools" },
@@ -888,9 +888,9 @@ dependencies = [
     { name = "vapoursynth-fmtconv" },
     { name = "vapoursynth-vszip" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/92/80/f431dbcf550b640142c405ca8b5801f9dfbdd32fb6637b80b447ac2e0b48/vsjetpack-2.0.0.tar.gz", hash = "sha256:f0b2a18f2f1afb85307f05fd97a379ccb2f3f12180875c2e754610f26f973f52", size = 579346, upload-time = "2026-06-25T20:46:32.489Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/5c/c2/ac431d1bfd185843159c128821d6aae6d95b2d61f38a560c201b5b56867f/vsjetpack-2.1.0.tar.gz", hash = "sha256:b8cfdf374f9f248f133e19a87aac63001aa47e197376a9f948f6934aa18b6ee6", size = 580602, upload-time = "2026-07-01T22:04:11.755Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/e4/cd/70d6c176e9e537bda00023f74a845dae7e0fae02bb8dafacdf2a47a0b914/vsjetpack-2.0.0-py3-none-any.whl", hash = "sha256:14da314243afa3f5ffcdb454059cd8ba496d1c0304fcf7ca54408c0885d06200", size = 429221, upload-time = "2026-06-25T20:46:30.212Z" },
+    { url = "https://files.pythonhosted.org/packages/07/23/2fa8b14c498fb2d6de66e4ba2f6448326b785712090dc6c88bcda8110565/vsjetpack-2.1.0-py3-none-any.whl", hash = "sha256:6a71d0633e4e69176b6d05d5f81e1992dd4a5b0185d0e37d591544032dd3e8ff", size = 429771, upload-time = "2026-07-01T22:04:08.89Z" },
 ]
 
 [[package]]
