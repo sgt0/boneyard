@@ -37,7 +37,7 @@ dev = [
 ]
 
 [build-system]
-requires = ["uv_build==0.11.26"]
+requires = ["uv_build==0.11.27"]
 build-backend = "uv_build"
 
 [tool.uv.sources]
