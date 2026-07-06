@@ -24,7 +24,7 @@ dependencies = [
     "muxtools~=0.4.2",
     "vapoursynth>=77",
     "vapoursynth-scxvid~=3.0",
-    "vsjetpack~=2.1.0",
+    "vsjetpack~=2.1.1",
 
     # Explicitly specify these so they're properly resolved through `uv --index`.
     "vapoursynth-fmtconv>=31.post1",
