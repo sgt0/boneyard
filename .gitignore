@@ -22,3 +22,6 @@ devenv.local.yaml
 
 # vs-jetpack
 .vsjet
+
+# mypy
+.mypy_cache
