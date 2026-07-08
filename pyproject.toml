@@ -20,7 +20,7 @@ classifiers = [
 requires-python = ">=3.13"
 dependencies = [
     "ass~=1.0.3",
-    "jetpytools~=3.0.0",
+    "jetpytools~=3.1.0",
     "muxtools~=0.4.2",
     "vapoursynth>=77",
     "vapoursynth-scxvid~=3.0",

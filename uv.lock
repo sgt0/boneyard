@@ -97,7 +97,7 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "ass", specifier = "~=1.0.3" },
-    { name = "jetpytools", specifier = "~=3.0.0" },
+    { name = "jetpytools", specifier = "~=3.1.0" },
     { name = "muxtools", specifier = "~=0.4.2" },
     { name = "vapoursynth", specifier = ">=77" },
     { name = "vapoursynth-fmtconv", specifier = ">=31.post1", index = "https://jaded-encoding-thaumaturgy.github.io/vs-wheels/simple" },
@@ -273,11 +273,11 @@ wheels = [
 
 [[package]]
 name = "jetpytools"
-version = "3.0.0"
+version = "3.1.0"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/46/08/54e39ffd47142e3710c557c3c4f7929f7d1b359d5d347ecf90acddf1bb15/jetpytools-3.0.0.tar.gz", hash = "sha256:762f802fbf9cb1c18d630c645c74e94575460a4c76e095e27a84749a03a209fd", size = 28354, upload-time = "2026-06-03T23:38:28.247Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/04/30/b7a458490bd3348be11ccb386a4d4af87471557d721eb8f5a111d193ef00/jetpytools-3.1.0.tar.gz", hash = "sha256:7c9ab1b1728a1b5f2d9158a131e13a59985d5766af3afb0a6a780e08b0add6c2", size = 28443, upload-time = "2026-07-08T14:56:27.059Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/5d/5f/5be75df735848b817b043c3358d951a0156dfff98e2044deb3e4cd9dc4c0/jetpytools-3.0.0-py3-none-any.whl", hash = "sha256:0d254c79c462ce7976d2d9eb2f83dad754312bbd1f8ee14b989c95b27260a4f6", size = 32593, upload-time = "2026-06-03T23:38:27.026Z" },
+    { url = "https://files.pythonhosted.org/packages/8b/ea/308c2e2e5d6ce99c1de66519458785b3c9546d3c3485ec63f9411d508ecb/jetpytools-3.1.0-py3-none-any.whl", hash = "sha256:5fc673cee60c5483a858217972ef6590a570a6353f61de9c28358c14db2b6ebc", size = 32879, upload-time = "2026-07-08T14:56:25.648Z" },
 ]
 
 [[package]]
