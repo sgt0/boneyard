@@ -13,12 +13,14 @@ from jetpytools import (
     SentinelT,
     SingleOrArr,
 )
+from pydantic import BaseModel
 from muxtools import default_style_args, edit_style
 from vsdenoise import MVToolsPreset, Prefilter, bm3d, mc_degrain, nl_means
 from vsdenoise.blockmatch import BM3D
 from vsdenoise.nlm import NLMeans
 from vstools import (
     ChromaLocation,
+    VSObjectMeta,
     clip_async_render,
     clip_data_gather,
     core,
@@ -40,6 +42,7 @@ __all__ = (
     "SceneBasedCambi",
     "SceneChangeMode",
     "Keyframes",
+    "VSModelMeta",
 )
 
 
@@ -313,3 +316,15 @@ class Keyframes(JetpackKeyframes):
             return f
 
         return out.std.ModifyFrame(out, _add_scene_idx)
+
+
+class VSModelMeta(VSObjectMeta, type(BaseModel)):  # type: ignore[misc]
+    """
+    Metaclass for classes that are both pydantic models and objects bound to the
+    lifecycle of a VapourSynth core.
+
+    Usage:
+        ```py
+        class MyModel(BaseModel, VSObject, metaclass=VSModelMeta): ...
+        ```
+    """
