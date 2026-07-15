@@ -22,6 +22,7 @@ from vstools import (
     clip_async_render,
     clip_data_gather,
     core,
+    depth,
     get_prop,
     get_w,
     merge_clip_props,
@@ -111,8 +112,11 @@ def denoise(
 ) -> vs.VideoNode:
     """MVTools + BM3D + NLMeans denoise."""
 
+    clip_16 = depth(clip, 16)
+    clip_32 = depth(clip, 32)
+
     ref = mc_degrain(
-        clip,
+        clip_16,
         prefilter=Prefilter.DFTTEST,
         preset=MVToolsPreset.HQ_SAD,
         blksize=block_size,
@@ -120,9 +124,10 @@ def denoise(
         limit=limit,
         refine=refine,
     )
+    ref = depth(ref, 32)
 
     denoised_luma = bm3d(
-        clip, ref=ref, sigma=sigma, tr=tr, profile=BM3D.Profile.NORMAL, planes=0
+        clip_32, ref=ref, sigma=sigma, tr=tr, profile=BM3D.Profile.NORMAL, planes=0
     )
     denoised_luma = ChromaLocation.ensure_presence(
         denoised_luma, ChromaLocation.from_video(clip, strict=True)
