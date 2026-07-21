@@ -24,6 +24,7 @@ dependencies = [
     "muxtools~=0.4.2",
     "pydantic~=2.13.4",
     "vapoursynth>=77",
+    "vapoursynth-cambi~=1.2.0",
     "vapoursynth-scxvid~=3.0",
     "vsjetpack~=2.1.1",
 
