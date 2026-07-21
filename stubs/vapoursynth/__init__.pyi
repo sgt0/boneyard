@@ -1739,6 +1739,10 @@ class VideoNode(RawNode):
     akarin: Final[_akarin._VideoNode_bound.Plugin]
     """Akarin's Experimental Filters"""
 # </attribute/VideoNode_bound/akarin>
+# <attribute/VideoNode_bound/cambi>
+    cambi: Final[_cambi._VideoNode_bound.Plugin]
+    """Contrast Aware Multiscale Banding Index (CAMBI)."""
+# </attribute/VideoNode_bound/cambi>
 # <attribute/VideoNode_bound/fmtc>
     fmtc: Final[_fmtc._VideoNode_bound.Plugin]
     """Format converter"""
@@ -1853,6 +1857,10 @@ class Core:
     akarin: Final[_akarin._Core_bound.Plugin]
     """Akarin's Experimental Filters"""
 # </attribute/Core_bound/akarin>
+# <attribute/Core_bound/cambi>
+    cambi: Final[_cambi._Core_bound.Plugin]
+    """Contrast Aware Multiscale Banding Index (CAMBI)."""
+# </attribute/Core_bound/cambi>
 # <attribute/Core_bound/fmtc>
     fmtc: Final[_fmtc._Core_bound.Plugin]
     """Format converter"""
@@ -1897,6 +1905,10 @@ class _akarin:
             @_Wrapper.Function
             def Cambi(self, /, clip: VideoNode, window_size: _IntLike | None = None, topk: _FloatLike | None = None, tvi_threshold: _FloatLike | None = None, scores: _IntLike | None = None, scaling: _FloatLike | None = None) -> VideoNode: ...
             @_Wrapper.Function
+            def DLISR(self, /, clip: VideoNode, scale: _IntLike | None = None, device_id: _IntLike | None = None) -> VideoNode: ...
+            @_Wrapper.Function
+            def DLVFX(self, /, clip: VideoNode, op: _IntLike, scale: _FloatLike | None = None, strength: _FloatLike | None = None, output_depth: _IntLike | None = None, num_streams: _IntLike | None = None, model_dir: _AnyStr | None = None) -> VideoNode: ...
+            @_Wrapper.Function
             def Expr(self, /, clips: VideoNode | _SequenceLike[VideoNode], expr: _AnyStr | _SequenceLike[_AnyStr], format: _IntLike | None = None, opt: _IntLike | None = None, boundary: _IntLike | None = None) -> VideoNode: ...
             @_Wrapper.Function
             def PropExpr(self, /, clips: VideoNode | _SequenceLike[VideoNode], dict: _VSCallback_akarin_PropExpr_dict) -> VideoNode: ...
@@ -1914,6 +1926,10 @@ class _akarin:
             @_Wrapper.Function
             def Cambi(self, /, window_size: _IntLike | None = None, topk: _FloatLike | None = None, tvi_threshold: _FloatLike | None = None, scores: _IntLike | None = None, scaling: _FloatLike | None = None) -> VideoNode: ...
             @_Wrapper.Function
+            def DLISR(self, /, scale: _IntLike | None = None, device_id: _IntLike | None = None) -> VideoNode: ...
+            @_Wrapper.Function
+            def DLVFX(self, /, op: _IntLike, scale: _FloatLike | None = None, strength: _FloatLike | None = None, output_depth: _IntLike | None = None, num_streams: _IntLike | None = None, model_dir: _AnyStr | None = None) -> VideoNode: ...
+            @_Wrapper.Function
             def Expr(self, /, expr: _AnyStr | _SequenceLike[_AnyStr], format: _IntLike | None = None, opt: _IntLike | None = None, boundary: _IntLike | None = None) -> VideoNode: ...
             @_Wrapper.Function
             def PropExpr(self, /, dict: _VSCallback_akarin_PropExpr_dict) -> VideoNode: ...
@@ -1925,6 +1941,20 @@ class _akarin:
             def Tmpl(self, /, prop: _AnyStr | _SequenceLike[_AnyStr], text: _AnyStr | _SequenceLike[_AnyStr]) -> VideoNode: ...
 
 # </implementation/akarin>
+
+# <implementation/cambi>
+class _cambi:
+    class _Core_bound:
+        class Plugin(_VSPlugin):
+            @_Wrapper.Function
+            def Cambi(self, /, clip: VideoNode, window_size: _IntLike | None = None, topk: _FloatLike | None = None, tvi_threshold: _FloatLike | None = None, max_log_contrast: _IntLike | None = None, eotf: _IntLike | None = None, prop: _AnyStr | None = None) -> VideoNode: ...
+
+    class _VideoNode_bound:
+        class Plugin(_VSPlugin):
+            @_Wrapper.Function
+            def Cambi(self, /, window_size: _IntLike | None = None, topk: _FloatLike | None = None, tvi_threshold: _FloatLike | None = None, max_log_contrast: _IntLike | None = None, eotf: _IntLike | None = None, prop: _AnyStr | None = None) -> VideoNode: ...
+
+# </implementation/cambi>
 
 # <implementation/fmtc>
 class _fmtc:
@@ -2386,6 +2416,8 @@ class _vszip:
             @_Wrapper.Function
             def AdaptiveBinarize(self, /, clip: VideoNode, clip2: VideoNode, c: _IntLike | None = None) -> VideoNode: ...
             @_Wrapper.Function
+            def AdaptiveGrainMask(self, /, clip: VideoNode, luma_scaling: _FloatLike | None = None) -> VideoNode: ...
+            @_Wrapper.Function
             def Bilateral(self, /, clip: VideoNode, ref: VideoNode | None = None, sigmaS: _FloatLike | _SequenceLike[_FloatLike] | None = None, sigmaR: _FloatLike | _SequenceLike[_FloatLike] | None = None, planes: _IntLike | _SequenceLike[_IntLike] | None = None, algorithm: _IntLike | _SequenceLike[_IntLike] | None = None, PBFICnum: _IntLike | _SequenceLike[_IntLike] | None = None) -> VideoNode: ...
             @_Wrapper.Function
             def BilateralDither(self, /, clip: VideoNode, ref: VideoNode | None = None, radius: _IntLike | _SequenceLike[_IntLike] | None = None, thr: _FloatLike | _SequenceLike[_FloatLike] | None = None, flat: _FloatLike | _SequenceLike[_FloatLike] | None = None, wmin: _FloatLike | _SequenceLike[_FloatLike] | None = None, subspl: _FloatLike | _SequenceLike[_FloatLike] | None = None, planes: _IntLike | _SequenceLike[_IntLike] | None = None) -> VideoNode: ...
@@ -2405,6 +2437,8 @@ class _vszip:
             def Compress(self, /, clip: VideoNode, codec: _IntLike | None = None, qscale: _IntLike | None = None, quality: _IntLike | None = None, dc_prec: _IntLike | None = None, chroma: _IntLike | None = None) -> VideoNode: ...
             @_Wrapper.Function
             def Deband(self, /, clip: VideoNode, range: _IntLike | None = None, thr: _FloatLike | _SequenceLike[_FloatLike] | None = None, grain: _FloatLike | _SequenceLike[_FloatLike] | None = None, sample_mode: _IntLike | None = None, seed: _IntLike | None = None, blur_first: _IntLike | None = None, dynamic_grain: _IntLike | None = None, keep_tv_range: _IntLike | None = None, random_algo_ref: _IntLike | None = None, random_algo_grain: _IntLike | None = None, random_param_ref: _FloatLike | None = None, random_param_grain: _FloatLike | None = None, thr1: _FloatLike | _SequenceLike[_FloatLike] | None = None, thr2: _FloatLike | _SequenceLike[_FloatLike] | None = None, angle_boost: _FloatLike | None = None, max_angle: _FloatLike | None = None) -> VideoNode: ...
+            @_Wrapper.Function
+            def Dither(self, /, clip: VideoNode, bitdepth: _IntLike, dither_type: _IntLike | None = None, sample_type: _IntLike | None = None, fulls: _IntLike | None = None, fulld: _IntLike | None = None) -> VideoNode: ...
             @_Wrapper.Function
             def EEDI3(self, /, clip: VideoNode, field: _IntLike, dh: _IntLike | None = None, alpha: _FloatLike | None = None, beta: _FloatLike | None = None, gamma: _FloatLike | None = None, nrad: _IntLike | None = None, mdis: _IntLike | None = None, hp: _IntLike | None = None, vcheck: _IntLike | None = None, vthresh0: _FloatLike | None = None, vthresh1: _FloatLike | None = None, vthresh2: _FloatLike | None = None, sclip: VideoNode | None = None, mclip: VideoNode | None = None) -> VideoNode: ...
             @_Wrapper.Function
@@ -2428,12 +2462,16 @@ class _vszip:
             @_Wrapper.Function
             def SSIMULACRA2(self, /, reference: VideoNode, distorted: VideoNode) -> VideoNode: ...
             @_Wrapper.Function
+            def WNNM(self, /, clip: VideoNode, sigma: _FloatLike | _SequenceLike[_FloatLike] | None = None, block_size: _IntLike | None = None, block_step: _IntLike | None = None, group_size: _IntLike | None = None, bm_range: _IntLike | None = None, radius: _IntLike | None = None, ps_num: _IntLike | None = None, ps_range: _IntLike | None = None, residual: _IntLike | None = None, adaptive_aggregation: _IntLike | None = None, rclip: VideoNode | None = None) -> VideoNode: ...
+            @_Wrapper.Function
             def XPSNR(self, /, reference: VideoNode, distorted: VideoNode, temporal: _IntLike | None = None, verbose: _IntLike | None = None) -> VideoNode: ...
 
     class _VideoNode_bound:
         class Plugin(_VSPlugin):
             @_Wrapper.Function
             def AdaptiveBinarize(self, /, clip2: VideoNode, c: _IntLike | None = None) -> VideoNode: ...
+            @_Wrapper.Function
+            def AdaptiveGrainMask(self, /, luma_scaling: _FloatLike | None = None) -> VideoNode: ...
             @_Wrapper.Function
             def Bilateral(self, /, ref: VideoNode | None = None, sigmaS: _FloatLike | _SequenceLike[_FloatLike] | None = None, sigmaR: _FloatLike | _SequenceLike[_FloatLike] | None = None, planes: _IntLike | _SequenceLike[_IntLike] | None = None, algorithm: _IntLike | _SequenceLike[_IntLike] | None = None, PBFICnum: _IntLike | _SequenceLike[_IntLike] | None = None) -> VideoNode: ...
             @_Wrapper.Function
@@ -2455,6 +2493,8 @@ class _vszip:
             @_Wrapper.Function
             def Deband(self, /, range: _IntLike | None = None, thr: _FloatLike | _SequenceLike[_FloatLike] | None = None, grain: _FloatLike | _SequenceLike[_FloatLike] | None = None, sample_mode: _IntLike | None = None, seed: _IntLike | None = None, blur_first: _IntLike | None = None, dynamic_grain: _IntLike | None = None, keep_tv_range: _IntLike | None = None, random_algo_ref: _IntLike | None = None, random_algo_grain: _IntLike | None = None, random_param_ref: _FloatLike | None = None, random_param_grain: _FloatLike | None = None, thr1: _FloatLike | _SequenceLike[_FloatLike] | None = None, thr2: _FloatLike | _SequenceLike[_FloatLike] | None = None, angle_boost: _FloatLike | None = None, max_angle: _FloatLike | None = None) -> VideoNode: ...
             @_Wrapper.Function
+            def Dither(self, /, bitdepth: _IntLike, dither_type: _IntLike | None = None, sample_type: _IntLike | None = None, fulls: _IntLike | None = None, fulld: _IntLike | None = None) -> VideoNode: ...
+            @_Wrapper.Function
             def EEDI3(self, /, field: _IntLike, dh: _IntLike | None = None, alpha: _FloatLike | None = None, beta: _FloatLike | None = None, gamma: _FloatLike | None = None, nrad: _IntLike | None = None, mdis: _IntLike | None = None, hp: _IntLike | None = None, vcheck: _IntLike | None = None, vthresh0: _FloatLike | None = None, vthresh1: _FloatLike | None = None, vthresh2: _FloatLike | None = None, sclip: VideoNode | None = None, mclip: VideoNode | None = None) -> VideoNode: ...
             @_Wrapper.Function
             def EEDI3H(self, /, field: _IntLike, dh: _IntLike | None = None, alpha: _FloatLike | None = None, beta: _FloatLike | None = None, gamma: _FloatLike | None = None, nrad: _IntLike | None = None, mdis: _IntLike | None = None, hp: _IntLike | None = None, vcheck: _IntLike | None = None, vthresh0: _FloatLike | None = None, vthresh1: _FloatLike | None = None, vthresh2: _FloatLike | None = None, sclip: VideoNode | None = None, mclip: VideoNode | None = None) -> VideoNode: ...
@@ -2474,6 +2514,8 @@ class _vszip:
             def RFS(self, /, clipb: VideoNode, frames: _IntLike | _SequenceLike[_IntLike], mismatch: _IntLike | None = None, planes: _IntLike | _SequenceLike[_IntLike] | None = None) -> VideoNode: ...
             @_Wrapper.Function
             def SSIMULACRA2(self, /, distorted: VideoNode) -> VideoNode: ...
+            @_Wrapper.Function
+            def WNNM(self, /, sigma: _FloatLike | _SequenceLike[_FloatLike] | None = None, block_size: _IntLike | None = None, block_step: _IntLike | None = None, group_size: _IntLike | None = None, bm_range: _IntLike | None = None, radius: _IntLike | None = None, ps_num: _IntLike | None = None, ps_range: _IntLike | None = None, residual: _IntLike | None = None, adaptive_aggregation: _IntLike | None = None, rclip: VideoNode | None = None) -> VideoNode: ...
             @_Wrapper.Function
             def XPSNR(self, /, distorted: VideoNode, temporal: _IntLike | None = None, verbose: _IntLike | None = None) -> VideoNode: ...
 
