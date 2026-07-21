@@ -103,7 +103,7 @@ requires-dist = [
     { name = "muxtools", specifier = "~=0.4.2" },
     { name = "pydantic", specifier = "~=2.13.4" },
     { name = "vapoursynth", specifier = ">=77" },
-    { name = "vapoursynth-cambi", specifier = ">=1.2.0" },
+    { name = "vapoursynth-cambi", specifier = "~=1.2.0" },
     { name = "vapoursynth-fmtconv", specifier = ">=31.1", index = "https://jaded-encoding-thaumaturgy.github.io/vs-wheels/simple" },
     { name = "vapoursynth-scxvid", specifier = "~=3.0" },
     { name = "vsjetpack", specifier = "~=2.1.1" },
