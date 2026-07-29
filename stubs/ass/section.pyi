@@ -4,11 +4,11 @@ from typing import Any, ClassVar, Self, TypeVar, overload, override
 from .line import Style, _Event
 
 __all__ = (
-    "LineSection",
-    "FieldSection",
     "EventsSection",
-    "StylesSection",
+    "FieldSection",
+    "LineSection",
     "ScriptInfoSection",
+    "StylesSection",
 )
 
 _T = TypeVar("_T")

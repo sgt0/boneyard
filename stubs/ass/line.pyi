@@ -4,13 +4,13 @@ from typing import Any, ClassVar, Self
 from .data import Color
 
 __all__ = (
-    "Unknown",
-    "Style",
-    "Dialogue",
     "Comment",
+    "Dialogue",
+    "Movie",
     "Picture",
     "Sound",
-    "Movie",
+    "Style",
+    "Unknown",
 )
 
 class _Line:
