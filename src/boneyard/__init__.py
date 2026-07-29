@@ -13,8 +13,8 @@ from jetpytools import (
     SentinelT,
     SingleOrArr,
 )
-from pydantic import BaseModel
 from muxtools import default_style_args, edit_style
+from pydantic import BaseModel
 from vsdenoise import MVToolsPreset, Prefilter, bm3d, mc_degrain, nl_means
 from vsdenoise.blockmatch import BM3D
 from vsdenoise.nlm import NLMeans
@@ -35,15 +35,15 @@ from vstools import Keyframes as JetpackKeyframes
 from vstools.functions.timecodes import SceneBasedDynamicCache
 
 __all__ = (
-    "LOFT_MOON_FIRA_DEFAULT",
     "LOFT_MOON_FIRA_ALT",
-    "LOFT_MOON_SIGNS",
+    "LOFT_MOON_FIRA_DEFAULT",
     "LOFT_MOON_FIRA_PRESET",
-    "denoise",
+    "LOFT_MOON_SIGNS",
+    "Keyframes",
     "SceneBasedCambi",
     "SceneChangeMode",
-    "Keyframes",
     "VSModelMeta",
+    "denoise",
 )
 
 
@@ -110,7 +110,7 @@ def denoise(
     sigma: SingleOrArr[float] = 0.7,
     sr: int = 2,
     strength: float = 0.2,
-    thSAD: int | tuple[int, int] = 115,  # noqa: N803
+    thSAD: int | tuple[int, int] = 115,
     tr: int = 2,
 ) -> vs.VideoNode:
     """MVTools + BM3D + NLMeans denoise."""
@@ -186,7 +186,7 @@ class SceneChangeMode(CustomIntEnum):
     """
 
     @property
-    def is_WWXD(self) -> bool:  # noqa: N802
+    def is_WWXD(self) -> bool:
         """Check whether a mode that uses wwxd is used."""
 
         return self in (
@@ -196,7 +196,7 @@ class SceneChangeMode(CustomIntEnum):
         )
 
     @property
-    def is_SCXVID(self) -> bool:  # noqa: N802
+    def is_SCXVID(self) -> bool:
         """Check whether a mode that uses scxvid is used."""
 
         return self in (
