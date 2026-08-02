@@ -105,7 +105,7 @@ LOFT_MOON_FIRA_PRESET = [
 def denoise(
     clip: vs.VideoNode,
     block_size: int = 64,
-    limit: int | tuple[int | None, int | None] | None = None,
+    limit: float | tuple[float, float] | None = None,
     refine: int = 3,
     sigma: SingleOrArr[float] = 0.7,
     sr: int = 2,
