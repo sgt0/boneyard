@@ -106,7 +106,7 @@ requires-dist = [
     { name = "vapoursynth-cambi", specifier = "~=1.2.0" },
     { name = "vapoursynth-fmtconv", specifier = ">=31.1", index = "https://jaded-encoding-thaumaturgy.github.io/vs-wheels/simple" },
     { name = "vapoursynth-scxvid", specifier = "~=3.0" },
-    { name = "vsjetpack", specifier = "~=2.1.1" },
+    { name = "vsjetpack", specifier = "~=2.2.0" },
 ]
 
 [package.metadata.requires-dev]
@@ -877,21 +877,21 @@ wheels = [
 
 [[package]]
 name = "vsjetpack"
-version = "2.1.1"
+version = "2.2.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "jetpytools" },
     { name = "numpy" },
     { name = "psutil" },
     { name = "rich" },
+    { name = "typing-extensions", marker = "python_full_version < '3.15'" },
     { name = "vapoursynth" },
     { name = "vapoursynth-akarin" },
-    { name = "vapoursynth-fmtconv" },
     { name = "vapoursynth-vszip" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/85/1a/d258eacac4325720d0a978bafabc37500835e1e3ec9221644dbaf9a938dd/vsjetpack-2.1.1.tar.gz", hash = "sha256:a085f1f36736643f4df7f2cc87060b622dc10124ad23a1e2f1aac6bd89b06786", size = 580654, upload-time = "2026-07-06T16:47:16.342Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/58/4d/ae2ef5d3bc8f1f81129d028dceea9df7306a48b9eda6945d6de4de6396d1/vsjetpack-2.2.0.tar.gz", hash = "sha256:c3c12361c4615f133583d97224639d443123c1d3a9dfd7ff19f7f2855484ccd5", size = 598345, upload-time = "2026-07-31T15:22:37.745Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/60/89/d64b5b0930124850137d73f7d374f1eba9d569e9cbf7e309d5723c25a9c8/vsjetpack-2.1.1-py3-none-any.whl", hash = "sha256:8355a4715f8c6c17896b7f0d5f3f453216aeb4f73285ca27e9ac5ae37e611b69", size = 429772, upload-time = "2026-07-06T16:47:13.759Z" },
+    { url = "https://files.pythonhosted.org/packages/4a/06/c6d6d01a66c63670a82bd3d1f1c94fd4b3c737400251d58bb39addc1cf13/vsjetpack-2.2.0-py3-none-any.whl", hash = "sha256:bf96512d306c6a4e09dfdf411834be281c091e4f6b87c70faab882a88c195c35", size = 436889, upload-time = "2026-07-31T15:22:35.371Z" },
 ]
 
 [[package]]
