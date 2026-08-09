@@ -20,7 +20,7 @@ classifiers = [
 requires-python = ">=3.13"
 dependencies = [
     "ass~=1.0.3",
-    "jetpytools~=3.1.0",
+    "jetpytools~=3.1.1",
     "muxtools~=0.4.2",
     "pydantic~=2.13.4",
     "vapoursynth>=77",
