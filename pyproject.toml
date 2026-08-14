@@ -26,7 +26,7 @@ dependencies = [
     "vapoursynth>=77",
     "vapoursynth-cambi~=1.2.0",
     "vapoursynth-scxvid~=3.0",
-    "vsjetpack~=2.2.0",
+    "vsjetpack~=2.2.1",
 
     # Explicitly specify these so they're properly resolved through `uv --index`.
     "vapoursynth-fmtconv>=31.1",
