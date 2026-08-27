@@ -126,7 +126,7 @@ requires-dist = [
     { name = "muxtools", specifier = "~=0.4.2" },
     { name = "pydantic", specifier = "~=2.13.4" },
     { name = "vapoursynth", specifier = ">=77" },
-    { name = "vapoursynth-cambi", specifier = "~=1.3.0" },
+    { name = "vapoursynth-cambi", specifier = "~=1.4.0" },
     { name = "vapoursynth-fmtconv", specifier = ">=31.1", index = "https://jaded-encoding-thaumaturgy.github.io/vs-wheels/simple" },
     { name = "vapoursynth-scxvid", specifier = "~=3.0" },
     { name = "vsjetpack", specifier = "~=2.2.2" },
@@ -945,17 +945,17 @@ wheels = [
 
 [[package]]
 name = "vapoursynth-cambi"
-version = "1.3.0"
+version = "1.4.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "vapoursynth" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/31/f5/c7ff77ed214d38b49a0a08b8bd40d7b88e22ed2f2e7d30aa05a185ccedd0/vapoursynth_cambi-1.3.0.tar.gz", hash = "sha256:f6e7bf99f1c31557bb4b74a6f5622c18270f46e6cb788a669f29413ab4aadb2f", size = 27462, upload-time = "2026-08-25T23:51:34.566Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/ad/da/a2a78d65ebd523eb33ed088a3b358d79d37401d3d252508b79263109c511/vapoursynth_cambi-1.4.0.tar.gz", hash = "sha256:f40bc55881959cbbcf6dd9c36c9ceebf34229c6647f05e66a53f579354aa3b22", size = 28727, upload-time = "2026-08-27T00:21:22.859Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/62/69/88ceaa5c308a2cf4ef88930d4a573e56a69fd24a1d1c7d7ab7b7e2d2b142/vapoursynth_cambi-1.3.0-py3-none-macosx_13_0_arm64.whl", hash = "sha256:e07cbae4f7d4646362a235d53e45d15f7d39b0a76caf207652a832a5732c09eb", size = 168770, upload-time = "2026-08-25T23:51:28.816Z" },
-    { url = "https://files.pythonhosted.org/packages/87/11/c7fb51d46841b28be906d88b5614d0fc44085a920892ad82306b6d257d17/vapoursynth_cambi-1.3.0-py3-none-manylinux_2_28_aarch64.whl", hash = "sha256:06c41c9a66feb00b84b6d6a84c645ecd9c8f5a0e6d2fcfb552852315a2dd471e", size = 181690, upload-time = "2026-08-25T23:51:30.189Z" },
-    { url = "https://files.pythonhosted.org/packages/ee/a8/6d4ad8b70e84086ce7a4262816124360b7ed809d831212fbc667069741e5/vapoursynth_cambi-1.3.0-py3-none-manylinux_2_28_x86_64.whl", hash = "sha256:ea11d488c8cd8f4b0ac9b314be9d7ea1f38c37123807e2b72f5e90308d9364c9", size = 542922, upload-time = "2026-08-25T23:51:31.586Z" },
-    { url = "https://files.pythonhosted.org/packages/08/37/6d93eaeddbfe9a122760271f1ab8f7e517920260d80a68e08fa9f24233af/vapoursynth_cambi-1.3.0-py3-none-win_amd64.whl", hash = "sha256:1c54b5c4c30c70042258aeb12ff4d634124240b473ea9b37162f46481d4a534b", size = 247857, upload-time = "2026-08-25T23:51:33.128Z" },
+    { url = "https://files.pythonhosted.org/packages/04/34/33606c834c10f6befc7588e0707c54218ff3368676ba195a690f3e04337b/vapoursynth_cambi-1.4.0-py3-none-macosx_13_0_arm64.whl", hash = "sha256:f23ead2efa374fc9bd5c81d95a85ec6d8c32f516a8f46c8c7451c0f8b6add9fb", size = 171194, upload-time = "2026-08-27T00:21:17.155Z" },
+    { url = "https://files.pythonhosted.org/packages/af/b6/2758827346d713ff6240cb5e54b1162e4b0da99d32aa2803cb9dca77cbfd/vapoursynth_cambi-1.4.0-py3-none-manylinux_2_28_aarch64.whl", hash = "sha256:8124ed04cb6885243675360cfd5227f12eeb7673ec1c9f38f878d2192354557e", size = 184767, upload-time = "2026-08-27T00:21:18.709Z" },
+    { url = "https://files.pythonhosted.org/packages/ca/9d/db50742b127f4826dde2f4be61fc398018eb999d38e71731eadee4cdb9a9/vapoursynth_cambi-1.4.0-py3-none-manylinux_2_28_x86_64.whl", hash = "sha256:c1a96d9ad34a277e6a101bbc85b7e6f7f14405f8f24277c51f96cb89ca672c1e", size = 551780, upload-time = "2026-08-27T00:21:20.184Z" },
+    { url = "https://files.pythonhosted.org/packages/2c/98/8c4f6f0c0264ecdfd474e7741bbd6bd840205c117231b6f500eb5942f3bb/vapoursynth_cambi-1.4.0-py3-none-win_amd64.whl", hash = "sha256:8aba6decad6b95c243c0aa7ef74e76aa09a559a3d402afc17a433101603611aa", size = 254624, upload-time = "2026-08-27T00:21:21.637Z" },
 ]
 
 [[package]]
